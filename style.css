@@ -1,0 +1,142 @@
+/* Add these styles to your existing CSS file */
+
+/* General Page Styles */
+.page-main {
+    padding-top: 85px; /* Header height */
+}
+
+.page-header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Detailed Services Page */
+.services-detailed {
+    padding: 80px 0;
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.service-item:nth-child(even) {
+    grid-template-columns: 2fr 1fr;
+}
+
+.service-item:nth-child(even) img {
+    order: 2;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.service-item-content h2 {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.service-item-content ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.service-item-content ul li {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.service-item-content ul li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Booking Page */
+#booking-widget {
+    padding: 80px 0;
+}
+.setmore-widget-container {
+    height: 800px; /* Adjust as needed */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Form Styles (for Contact & Apply) */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#contact-form-section, #apply-form-section {
+    padding: 80px 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--accent-color);
+}
+
+#form-status {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.btn-login {
+    margin-left: 15px;
+}
+
+/* Responsive adjustments for service items */
+@media (max-width: 992px) {
+    .service-item, .service-item:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    .service-item:nth-child(even) img {
+        order: -1; /* Image on top */
+    }
+}
